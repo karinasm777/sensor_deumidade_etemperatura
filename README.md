@@ -1,0 +1,1 @@
+# sensor_deumidade_etemperatura

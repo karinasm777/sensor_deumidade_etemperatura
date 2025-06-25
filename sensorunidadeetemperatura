@@ -1,1 +1,22 @@
-falta adicionar
+#include "dht.h" //Inclusão da biblioteca
+const int pinoDHT11 = A0; //Pino sinal do sensor ligado a porta A5
+dht DHT; //Objeto criado a partir da biblioteca dht
+void setup() {
+Serial.begin(9600); // Inicia comunicação serial em 9600
+delay(1000); // Aguarde 1 segundo
+}
+void loop() {
+DHT.read11(pinoDHT11); //Lê os valores do sensor
+//Imprime o valor medido e remove a parte decimal
+Serial.println("Hello! ");
+Serial.print("Temperatura: ");
+Serial.println(DHT.temperature,0);
+Serial.print("Umidade do ar: ");
+Serial.println(DHT.humidity,0);
+Serial.print();
+Serial.print();
+Serial.print();
+
+delay(3000); //Lê o valor de 2 em 2 segundos, NÃO ALTERE ESTE VALOR
+}
+

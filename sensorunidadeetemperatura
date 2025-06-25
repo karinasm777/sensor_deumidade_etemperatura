@@ -13,10 +13,5 @@ Serial.print("Temperatura: ");
 Serial.println(DHT.temperature,0);
 Serial.print("Umidade do ar: ");
 Serial.println(DHT.humidity,0);
-Serial.print();
-Serial.print();
-Serial.print();
-
-delay(3000); //Lê o valor de 2 em 2 segundos, NÃO ALTERE ESTE VALOR
+delay(2000); //Lê o valor de 2 em 2 segundos, NÃO ALTERE ESTE VALOR
 }
-
